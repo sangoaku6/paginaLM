@@ -1,0 +1,82 @@
+footer{
+    background: var(--barraMenu,#ff00ff);
+    margin: 0 auto;
+    padding: 0;
+}
+
+button{
+    background-color: var(--fondoc, #ff00ff);
+    border-radius: 2px;
+    border: transparent;
+}
+
+button.copiar, button.enviarmail{
+    width: 80px;
+}
+
+.contfooter {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "contacto opinion mapa"; 
+  }
+.contacto { 
+    grid-area: contacto;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    
+ }
+
+.contacto input{
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.contacto button{
+    margin-top: 1em;
+}
+
+.opinion { 
+    grid-area: opinion;
+    color: white;
+    text-align: center;
+}
+
+.opinion button{
+    margin-top: 1em;
+    display: inline-flex;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+.mapa { 
+    color: white;
+    grid-area: mapa;
+    text-align: center;
+}
+
+.mapa iframe{
+    border: 2px solid white;
+    border-style: inset;
+    transform: translateY(-1em);
+}
+
+@media (max-width: 1120px) {
+    .contfooter {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "contacto"
+            "opinion" 
+            "mapa"; 
+        }
+
+}

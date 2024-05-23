@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilo/paleta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilo/stylefooter.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <footer>
+        <div class="contfooter">
+            <div class="contacto">
+                <form>
+                <h3>¿Quieres Contactar conmigo?</h3>
+                <label>Nombre:</label><input type="text"> <br>
+                <label>Asunto:</label><input type="text"> <br>
+                <label>Correo:</label><input type="email" value="santi@contacto.com" id="email"> 
+                <button class="copiar" onclick="copiartexto()">Copiar</button>
+                <a href="mailto:santi@contacto.com">
+                    <button class="enviarmail" type="button">Contactar</button>
+                </a>
+                </form>
+            </div>
+            <div class="opinion">
+                <h3>¿Que te parece la página?</h3>
+                <form>
+                    <textarea rows= "5" cols="40"></textarea> <br>
+                    <button type="submit" onclick="enviaropinion()">Enviar</button>
+                    <button type="reset">Restablecer</button>
+                </form>
+            </div>
+            <div class="mapa">
+                <h3>Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6396.233061508851!2d-4.282973224497507!3d36.71976247223032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd725a6469afd4b5%3A0x79b9c72e1a46b606!2sIES%20Bezmiliana!5e0!3m2!1ses!2ses!4v1716382637781!5m2!1ses!2ses" width="400" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </footer>
+</body>
+</html>

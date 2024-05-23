@@ -1,0 +1,158 @@
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+  .great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.light{
+    background-color: var(--fondoc, #ff00ff);
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+}
+.dark{
+    background-color: var(--fondoo, #ff00ff);
+    color: white;
+    box-shadow: 2px 3px 20px black, 0 0 60px var(--barraMenu,#ff00ff) inset;
+}
+
+h1{
+    font-family: 'Monserrat', sans-serif;
+    text-align: center; 
+}
+
+.bienvenido{
+    border: 1px inset var(--barraMenu,#ff00ff);
+    margin-top: 1em;
+    text-align: center;
+    padding: 1em;
+    background-color: black;
+    background-image: url(../imagenes/dragonlance.png);
+    background-position: -20px -280px;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.mundo{
+    border: 1px inset var(--barraMenu,#ff00ff);   
+    text-align: center;
+}
+
+.mundo h3, .mundo p {
+    transform: translateY(40px);
+}
+
+.personajes{
+    border: 1px inset var(--barraMenu,#ff00ff);
+    text-align: center;
+}
+
+.articulo{
+    border: 1px inset var(--barraMenu,#ff00ff);
+    margin-bottom: 1em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.articulo p{
+    transform: translateY(-30px);
+}
+
+.contenido {
+    background-image: url(/imagenes/nnnoise.svg);
+    padding-left: 2em;
+    padding-right: 2em;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1.6fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas:
+    "bienvenido bienvenido" 
+    "mundo personajes"
+    "articulo articulo"; 
+  }
+
+  .bienvenido { grid-area: bienvenido;}
+  .mundo { grid-area: mundo; }
+  .personajes { grid-area: personajes; }
+  .articulo { grid-area: articulo;}
+
+.contenido a{
+    color: currentColor;
+  }
+
+.pjs {
+font-size: 2em;
+font-family: "Great Vibes", cursive;
+font-weight: bold;
+display: grid; 
+grid-template-columns: 1fr 1fr 1fr; 
+grid-template-rows: 1fr; 
+gap: 0px 0px; 
+grid-template-areas: 
+    "soran zoldack nakai"; 
+}
+.soran { grid-area: soran; }
+.zoldack { grid-area: zoldack; }
+.nakai { grid-area: nakai; }
+
+.pjs a{
+    text-decoration: none;
+}
+
+.pjs img {
+    width: 150px;
+    border: 2px inset var(--barraMenu,#ff00ff);
+    border-radius: 50%;
+}
+@media (max-width: 800px) {
+
+.mundo h3, .mundo p {
+    transform: translateY(0px);
+}
+
+
+.contenido {
+display: grid; 
+grid-template-columns: 1fr; 
+grid-template-rows: 15em 12em 1fr 9em; 
+gap: 1em; 
+grid-template-areas: 
+    "bienvenido"
+    "mundo"
+    "personajes"
+    "articulo"; 
+}
+.bienvenido { 
+    grid-area: bienvenido; 
+    background-position: -1200px -30px;
+    background-repeat: no-repeat;
+}
+.mundo { grid-area: mundo; }
+.personajes { grid-area: personajes; text-align: center;}
+.articulo { grid-area: articulo; }
+
+.pjs {
+display: grid; 
+grid-template-columns: 1fr; 
+grid-template-rows: 1fr; 
+gap: 1em; 
+grid-template-areas: 
+    "soran"
+    "zoldack"
+    "nakai"; 
+}
+.soran { grid-area: soran; }
+.zoldack { grid-area: zoldack; }
+.nakai { grid-area: nakai; }
+  }

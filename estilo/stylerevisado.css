@@ -1,0 +1,252 @@
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+  .great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+.light{
+    background-color: var(--fondoc, #ff00ff);
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+}
+.dark{
+    background-color: var(--fondoo, #ff00ff);
+    color: white;
+    box-shadow: 2px 3px 20px black, 0 0 60px var(--barraMenu,#ff00ff) inset;
+}
+
+h1{
+    font-family: 'Monserrat', sans-serif; 
+}
+
+.resumen h1{
+    font-family: "Great Vibes", cursive;
+    font-size: 3em;
+    margin-bottom: -0.3em;
+}
+
+fieldset{
+    border: 1px solid var(--barraMenu,#ff00ff);
+    width: 180px;
+}
+
+.shortcut a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+.shortcut ul{
+    list-style: decimal;
+}
+
+.personaje table{
+    float: right;
+}
+
+.personaje table, .personaje th, .personaje td{
+    margin-top: .56em;
+    border: 1px solid var(--barraMenu,#ff00ff);
+    border-collapse: collapse;
+    word-wrap: break-word;
+    width: 250px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.personaje th, tr,td{
+    width: 33%;
+}
+.personaje th{
+    background-color: var(--barraMenu, #ff00ff);
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+.personaje th h3{
+    padding: 0;
+    margin: 0;
+}
+
+.personaje td img{
+    display: block;
+    transition: 0.7s ease-out;
+}
+.personaje td img:hover{
+    transform: scale(1.2);
+    transition: 0.7s ease-in;
+}
+.personaje td{
+    padding: .2em;
+}
+.personaje ul{
+    padding: 1em;
+    margin: 0;
+}
+
+.informacion img{
+    width: 400px;
+}
+
+.informacion h1{
+    margin-bottom: -5px;
+}
+.informacion hr{
+    opacity: 0.4;
+    margin-bottom: 1em;
+}
+
+table.equipo{
+    border: 1px solid var(--barraMenu,#ff00ff);
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.equipo td{
+    border: 1px solid var(--barraMenu,#ff00ff);
+    border-collapse: collapse;
+    text-align: justify;
+}
+.contenido {
+    background-image: url(/imagenes/nnnoise.svg);
+    padding-left: 2em;
+    padding-right: 2em;
+
+    display: grid; 
+    column-gap: 1em;
+    grid-template-columns: 1.7fr 0.3fr; 
+    grid-template-rows: 0fr 0fr 1fr; 
+    gap: 0px; 
+    grid-template-areas:
+      "resumen personaje" 
+      "shortcut personaje"
+      "informacion ."; 
+    
+  }
+  .resumen { grid-area: resumen;}
+  .shortcut { grid-area: shortcut; }
+  .personaje { grid-area: personaje; }
+  .informacion { grid-area: informacion;}
+
+  .contenido a{
+    color: currentColor;
+  }
+
+@media (max-width: 800px) {
+
+.contenido {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0fr 10em 1fr; 
+    gap: 0px; 
+    grid-template-areas: 
+        "resumen"
+        "shortcut"
+        "personaje"
+        "informacion"; 
+      }
+    .resumen { grid-area: resumen;}
+    .shortcut { grid-area: shortcut; }
+    .personaje { grid-area: personaje; }
+    .informacion { grid-area: informacion; }
+
+    .personaje table{
+        float: none;
+        margin: 0 auto;
+        width: auto;   
+    }
+
+}
+
+/*  CONTENIDO DE CAMPAÑA.HTML */
+.contenidocamp{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenidocamp h1{
+    text-align: center;
+}
+
+.contenidocamp p {
+    text-align: center;
+}
+
+.contenidocamp {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.7fr 1.3fr; 
+    gap: 0px 1em; 
+    grid-template-areas: 
+        "intro intro"
+        "campimg campimgdesc";
+  }
+
+  .campimg img { 
+    grid-area: campimg; 
+    max-width: 100%;
+    height: auto;
+}
+
+  .campimgdesc { 
+    grid-area: campimgdesc; 
+    text-align: justify;
+    align-items: center;
+    align-content: center;
+ }
+  .intro { grid-area: intro; }
+
+  @media (max-width: 800px) {
+    .contenidocamp {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px; 
+        grid-template-areas: 
+            "intro"
+            "campimg"
+            "campimgdesc";
+      }
+      .campimg { grid-area: campimg; text-align: center; }
+      .campimgdesc { 
+        grid-area: campimgdesc; 
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 1em;
+     }
+      .intro { grid-area: intro; }
+
+  }  
+
+/*  CONTENIDO DE MUNDO.HTML */
+    .mapamundi img{
+        max-width: 100%;
+        height: auto;
+  }
+
+/*  CONTENIDO DE ARTICULO.HTML */
+    article{
+        margin-left: 25%;
+        margin-right: 25%;
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+    }
+    article img{
+        max-width: 100%;
+        height: auto; 
+    }
+
+/*  CONTENIDO DE GALERIA.HTML */
+
